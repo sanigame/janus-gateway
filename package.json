@@ -2,7 +2,10 @@
   "name": "janus-gateway",
   "version": "0.7.5",
   "description": "A javascript library for interacting with the C based Janus WebRTC Server",
-  "main": "html/janus.js",
+  "main": "npm/janus.js",
+  "scripts": {
+    "postinstall": "cd npm && npm install && npm run rollup -- --o janus.js --f cjs"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/meetecho/janus-gateway.git"
